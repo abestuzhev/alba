@@ -4,18 +4,84 @@
   <meta charset="utf-8">
   <title></title>
   <link rel="stylesheet" href="template_df4c18901d645f36d8c365d65ee38fe4.css">
+  <link rel="stylesheet" href="js/fancybox/source/jquery.fancybox.css">
   <link rel="stylesheet" href="style-alba.css">
-  <script
-        src="https://code.jquery.com/jquery-3.1.1.min.js"
-        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-        crossorigin="anonymous"></script>
-  <script src="main.js"></script>
+
+
 </head>
 <body>
-<a href="#" class="btn btn-primary pull-right header-favorite">
-  <span class="icon-mail-2"></span>
-  <span data-role="header-favorite">Обратная связь</span>
-</a>
+
+<div class="test-block">
+
+  <a href="#popap-feedback" class="btn btn-primary header-favorite fancybox">
+    <span class="icon-mail"></span>
+    <span data-role="header-favorite">Обратная связь</span>
+  </a>
+
+</div>
+
+
+<div class="popap-feedback" id="popap-feedback">
+  <div class="popap-feedback_title">Обратная связь</div>
+  <form action="#" class="popap-feedback_form">
+    <div class="popap-feedback_item">
+      <label for="name-feedback" class="popap-feedback_label">Ваше имя<span>*</span></label>
+      <input type="text" class="popap-feedback_input" id="name-feedback">
+    </div>
+
+    <div class="popap-feedback_item">
+      <label for="order-feedback" class="popap-feedback_label">№ заказа<span>*</span></label>
+      <input type="text" class="popap-feedback_input" id="order-feedback">
+    </div>
+
+    <div class="popap-feedback_item">
+      <label for="phone-feedback" class="popap-feedback_label">Телефон<span>*</span></label>
+      <input type="text" class="popap-feedback_input" id="phone-feedback">
+    </div>
+
+    <div class="popap-feedback_item">
+      <label for="phone-feedback" class="popap-feedback_label">Тема вопроса<span>*</span></label>
+      <div class="box">
+        <select class="select">
+          <option value="1">Вопрос по сумме накоплений на lисконтных картах и картах VIP</option>
+          <option value="2">Вопрос по возврату денежных средств</option>
+          <option value="3">Вопрос о переносе накоплений в случае утери ДК или переноса</option>
+          <option value="4">Вопрос по сроку/времени доставки заказа</option>
+          <option value="5">Другое</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="popap-feedback_item">
+      <textarea class="popap-feedback_textarea" name="" rows="6" placeholder="Введите вопрос"></textarea>
+      <div class="popap-feedback_text"><span>*</span> - поля обязательные для заполнения</div>
+    </div>
+
+
+    <button class="btn btn-primary popap-feedback_btn">Отправить</button>
+  </form><!--popap-feedback_form-->
+
+  <a href="#" class="btn btn-primary popap-feedback_btn-close ">
+    <span class="icon-close"></span>
+    <span data-role="header-favorite">Закрыть</span>
+  </a>
+</div><!--popap-feedback-->
+
+
+<script src="js/jquery.js"></script>
+<script src="js/jquery.nice-select.min.js"></script>
+<script src="js/fastclick.js"></script>
+<script src="js/prism.js"></script>
+<script src="js/fancybox/source/jquery.fancybox.pack.js"></script>
+
+<script>
+  $(document).ready(function() {
+    $('.select:not(.ignore)').niceSelect();
+    FastClick.attach(document.body);
+
+    $(".fancybox").fancybox();
+  });
+</script>
 
 </body>
 </html>
