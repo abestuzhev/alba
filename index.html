@@ -13,7 +13,7 @@
 
 <div class="test-block">
 
-  <a href="#popap-feedback" class="btn btn-primary header-favorite fancybox">
+  <a href="" class="btn btn-primary header-favorite popap-feedback-link ">
     <span class="icon-mail"></span>
     <span data-role="header-favorite">Обратная связь</span>
   </a>
@@ -26,17 +26,17 @@
   <form action="#" class="popap-feedback_form">
     <div class="popap-feedback_item">
       <label for="name-feedback" class="popap-feedback_label">Ваше имя<span>*</span></label>
-      <input type="text" class="popap-feedback_input" id="name-feedback">
+      <input type="text" class="popap-feedback_input" id="name-feedback" name="name">
     </div>
 
     <div class="popap-feedback_item">
       <label for="order-feedback" class="popap-feedback_label">№ заказа<span>*</span></label>
-      <input type="text" class="popap-feedback_input" id="order-feedback">
+      <input type="text" class="popap-feedback_input" id="order-feedback" name="order">
     </div>
 
     <div class="popap-feedback_item">
       <label for="phone-feedback" class="popap-feedback_label">Телефон<span>*</span></label>
-      <input type="text" class="popap-feedback_input" id="phone-feedback">
+      <input type="text" class="popap-feedback_input" id="phone-feedback" name="phone">
     </div>
 
     <div class="popap-feedback_item">
@@ -73,6 +73,8 @@
 <script src="js/fastclick.js"></script>
 <script src="js/prism.js"></script>
 <script src="js/fancybox/source/jquery.fancybox.pack.js"></script>
+<script src="main.js"></script>
+
 
 <script>
   $(document).ready(function() {

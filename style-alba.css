@@ -17,13 +17,52 @@
   height: 600px;
   padding: 29px 40px;
   border-radius: 4px;
-  /*position: fixed;*/
-  /*top: 50%;*/
-  /*left: 50%;*/
-  /*margin-left: -320px;*/
-  /*margin-top: -300px;*/
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-left: -320px;
+  margin-top: -300px;
   background-color: #fff;
   display: none;
+}
+
+@keyframes bounce {
+  0% {
+    -webkit-transform: translateY(-2000px);
+    -moz-transform: translateY(-2000px);
+    -ms-transform: translateY(-2000px);
+    -o-transform: translateY(-2000px);
+    transform: translateY(-2000px);
+  }
+  70% {
+    -webkit-transform: translateY(30px);
+    -moz-transform: translateY(30px);
+    -ms-transform: translateY(30px);
+    -o-transform: translateY(30px);
+    transform: translateY(30px);
+  }
+  90% {
+    -webkit-transform: translateY(-10px);
+    -moz-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    -o-transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+/*popap show*/
+.popap-feedback-show {
+  display: block;
+  -webkit-animation: bounce 0.6s;
+  -o-animation: bounce 0.6s;
+  animation: bounce 0.6s;
 }
 
 .popap-feedback * {
