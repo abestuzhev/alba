@@ -1,6 +1,4 @@
-// $(document).ready(function() {
-//     $(".fancybox").fancybox();
-// });
+
 
 var link = document.querySelector(".popap-feedback-link");
 var popap = document.querySelector(".popap-feedback");
